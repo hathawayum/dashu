@@ -17,6 +17,32 @@
     <script>
         window.onload = function () {
 
+            let bodyTag = document.getElementsByTagName('body')[0];
+
+            //메뉴 나타나기
+            let menuOpen = document.getElementsByClassName('logo_open')[0];
+            let menuClose = document.getElementsByClassName('menu_close')[0];
+            let hdMenu = document.getElementsByClassName('close')[0];
+
+
+            hdMenu.style.display = 'none';
+
+            menuOpen.onclick = function () {
+                if (hdMenu.style.display == 'none') {
+                    hdMenu.style.display = 'block';
+                    
+                }
+            }
+            menuClose.onclick = function () {
+                if (hdMenu.style.display == 'block') {
+                    hdMenu.style.display = 'none';
+                    
+                }
+            }
+
+
+
+
             var swiper = new Swiper(".main_visual", {
                 spaceBetween: 30,
                 centeredSlides: true,
@@ -170,7 +196,7 @@
 
 
 
-            
+
 
 
 
@@ -252,8 +278,8 @@
                                 <li><a href="#">퍼퓸세트</a></li>
                                 <li><a href="#">바디 스프레이</a></li>
                             </ul>
-                        </li class="depth01">
-                        <li>
+                        </li>
+                        <li class="depth01">
                             <a href="#">헤어왁스</a>
                         </li>
                         <li class="depth01">
@@ -331,20 +357,20 @@
                     <img src="img/20230309_hairwax_stick_founation_mainbanner.jpg" alt="stick founation" />
                 </div>
                 <div class="swiper-slide">
-                    <img src="img/20230407_hairwax_down_cream_mainbanner.jpg" alt="차은우" />
+                    <img src="img/20230407_hairwax_down_cream_mainbanner.jpg" alt="down cream" />
                 </div>
                 <div class="swiper-slide">
-                    <img src="img/20221213_hairwax_grooming_tonic_foam_mainbanner.jpg" alt="차은우" />
+                    <img src="img/20221213_hairwax_grooming_tonic_foam_mainbanner.jpg" alt="tonic foam" />
                 </div>
                 <div class="swiper-slide">
-                    <img src="img/20220211_dashu_7years_event_pc_mainbanner.jpg" alt="차은우" />
+                    <img src="img/20220211_dashu_7years_event_pc_mainbanner.jpg" alt="dashu 7years event" />
                 </div>
                 <div class="swiper-slide">
-                    <img src="img/20211202_hairwax_application_mainbanner_01.jpg" alt="차은우" />
+                    <img src="img/20211202_hairwax_application_mainbanner_01.jpg" alt="application mainbanner" />
                 </div>
             </div>
-            <div class="swiper-button-next"></div>
-            <div class="swiper-button-prev"></div>
+            <!-- <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div> -->
             <div class="swiper-pagination"></div>
         </div><!-- .main_visual end -->
 
@@ -561,8 +587,8 @@
                             </div>
 
                         </div>
-                        <div class="swiper-button-next"></div>
-                        <div class="swiper-button-prev"></div>
+                        <!-- <div class="swiper-button-next"></div>
+                        <div class="swiper-button-prev"></div> -->
                         <div class="swiper-pagination"></div>
                     </div>
                     <div class="swiper cont01_02">
@@ -841,8 +867,8 @@
                         </div>
 
                     </div>
-                    <div class="swiper-button-next"></div>
-                    <div class="swiper-button-prev"></div>
+                 <!--    <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev"></div> -->
                     <div class="swiper-pagination"></div>
 
                 </div>
@@ -1304,7 +1330,7 @@
                                 <p>업그레이드 되서 좋은것 같습니다(2021-01-14 12:41:37 에 등록된 네이버 페이 구매평)</p>
                             </div>
                         </div>
-                       
+
 
                     </div>
                     <div class="swiper-button-next"></div>
@@ -1320,10 +1346,10 @@
         <section class="cont06">
             <div class="inner">
                 <div class="title">
-                   <figure>
-                    <img src="img/16583740_1558197247541806_2569363837216096256_a.jpg" alt="DASHU" />
-                   </figure>
-                   <p>follow</p>
+                    <figure>
+                        <img src="img/16583740_1558197247541806_2569363837216096256_a.jpg" alt="DASHU" />
+                    </figure>
+                    <p>follow</p>
                 </div>
 
                 <div #swiperRef="" class="swiper cont06_01">
@@ -1373,7 +1399,7 @@
                         <div class="swiper-slide">
                             <img src="img/338590994_935939137828992_8980573255039034064_n.jpg" alt="오늘은 내얼굴이" />
                         </div>
-                     
+
                     </div>
                     <div class="swiper-button-next"></div>
                     <div class="swiper-button-prev"></div>
