@@ -4,1458 +4,560 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>다슈</title>
-    <!-- swiper css -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+    <title>😊고유미 포트폴리오</title>
+    <!-- fancybox.min.css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css"
+        integrity="sha512-H9jrZiiopUdsLpg94A333EfumgUBpO9MdbxStdeITo+KEIMaNfHNvwyjjDJb+ERPaRS6DpyRlKbvPUasNItRyw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
+
     <link href="css/main.css" rel="stylesheet" />
 
+    <!-- jquery 3.7.0 -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"
+        integrity="sha512-3gJwYpMe3QewGELv8k/BX9vcqhryRdzRMxVfq6ngyWXwo03GFEzjsUm8Q7RZcHPHksttq7/GFoxjCVUjkjvPdw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <!-- fancybox.min.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"
+        integrity="sha512-uURl+ZXMBrF4AwGaWmEetzrd+J5/8NRkWAvJx5sbPSSuOb0bZLqf+tOzniObO00BjHa/dD7gub9oCGMLPQHtQA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
-    <!-- swiper js -->
-    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
-
-    <script>
-        window.onload = function () {
-
-            let bodyTag = document.getElementsByTagName('body')[0];
-
-            //메뉴 나타나기
-            let menuOpen = document.getElementsByClassName('logo_open')[0];
-            let menuClose = document.getElementsByClassName('menu_close')[0];
-            let hdMenu = document.getElementsByClassName('close')[0];
-
-
-            hdMenu.style.display = 'none';
-
-            menuOpen.onclick = function () {
-                if (hdMenu.style.display == 'none') {
-                    hdMenu.style.display = 'block';
-                    
-                }
-            }
-            menuClose.onclick = function () {
-                if (hdMenu.style.display == 'block') {
-                    hdMenu.style.display = 'none';
-                    
-                }
-            }
-
-
-
-
-            var swiper = new Swiper(".main_visual", {
-                spaceBetween: 30,
-                centeredSlides: true,
-                autoplay: {
-                    delay: 2500,
-                    disableOnInteraction: false,
-                },
-                pagination: {
-                    el: ".swiper-pagination",
-                    clickable: true,
-                },
-                navigation: {
-                    nextEl: ".swiper-button-next",
-                    prevEl: ".swiper-button-prev",
-                },
-            });
-
-            var swiper = new Swiper(".cont01_01", {
-                cssMode: true,
-                navigation: {
-                    nextEl: ".swiper-button-next",
-                    prevEl: ".swiper-button-prev",
-                },
-                pagination: {
-                    el: ".swiper-pagination",
-                },
-                mousewheel: true,
-                keyboard: true,
-                autoplay: {
-                    delay: 2500,
-                    disableOnInteraction: false,
-                },
-            });
-
-
-
-            var swiper = new Swiper(".cont01_02", {
-                slidesPerView: 1,
-                spaceBetween: 20,
-                freeMode: true,
-                pagination: {
-                    el: ".swiper-pagination",
-                    clickable: true,
-                },
-                navigation: {
-                    nextEl: ".swiper-button-next",
-                    prevEl: ".swiper-button-prev",
-                },
-                keyboard: true,
-                breakpoints: {
-                    640: {
-                        slidesPerView: 2,
-                        spaceBetween: 20,
-                    },
-                    768: {
-                        slidesPerView: 2,
-                        spaceBetween: 20,
-                    },
-                    1024: {
-                        slidesPerView: 3,
-                        spaceBetween: 20,
-                    },
-                },
-            });
-
-
-            var swiper = new Swiper(".cont02_01", {
-                spaceBetween: 30,
-                centeredSlides: true,
-                autoplay: {
-                    delay: 2500,
-                    disableOnInteraction: false,
-                },
-                pagination: {
-                    el: ".swiper-pagination",
-                    clickable: true,
-                },
-                navigation: {
-                    nextEl: ".swiper-button-next",
-                    prevEl: ".swiper-button-prev",
-                },
-            });
-
-
-
-
-
-
-
-
-            var swiper = new Swiper(".cont05_01", {
-                slidesPerView: 2,
-                spaceBetween: 10,
-                pagination: {
-                    el: ".swiper-pagination",
-                    clickable: true,
-                },
-                navigation: {
-                    nextEl: ".swiper-button-next",
-                    prevEl: ".swiper-button-prev",
-                },
-                breakpoints: {
-                    640: {
-                        slidesPerView: 2,
-                        spaceBetween: 20,
-                    },
-                    768: {
-                        slidesPerView: 3,
-                        spaceBetween: 20,
-                    },
-                    1024: {
-                        slidesPerView: 4,
-                        spaceBetween: 20,
-                    },
-                },
-            });
-
-
-
-
-
-
-            var swiper = new Swiper(".cont06_01", {
-                slidesPerView: 3,
-                centeredSlides: true,
-                spaceBetween: 30,
-                pagination: {
-                    el: ".swiper-pagination",
-                    type: "fraction",
-                },
-                navigation: {
-                    nextEl: ".swiper-button-next",
-                    prevEl: ".swiper-button-prev",
-                },
-                breakpoints: {
-                    640: {
-                        slidesPerView: 3,
-                        spaceBetween: 20,
-                    },
-                    768: {
-                        slidesPerView: 3,
-                        spaceBetween: 20,
-                    },
-                    1024: {
-                        slidesPerView: 6,
-                        spaceBetween: 20,
-                    },
-                },
-            });
-
-
-
-
-
-
-
-
-
-        }
-    </script>
+    <script src="js/script.js"></script>
 
 
 </head>
 
 <body>
+    <div class="circle" style="left: 1527px; top: 2px;">
+    </div>
+
     <header>
-        <div class="inner">
-            <div class="inner_top">
-                <nav>
-                    <ul>
-                        <li><a href="#">LOGIN</a></li>
-                        <li><a href="#">JOIN</a></li>
-                        <li><a href="#">MY SHOPPING</a></li>
-                        <li><a href="#">CART</a></li>
-                        <li><a href="#">Q&A</a></li>
-                        <li><a href="#">REVIEW</a></li>
-                    </ul>
-                </nav>
+        <h1>KKOYUM</h1>
+        <nav>
+            <ul>
+                <li class="on"><a href=.main_visual>HOME</a></li>
+                <li><a href=#aboutme>ABOUT</a></li>
+                <li><a href=#web>WEB</a></li>
+                <li><a href=#design>DESIGN</a></li>
+                <li><a href=#photograph>PHOTO</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="main_visual cont">
+            <div class="inner">
+                <div>
+                    <h2>2023 PORTPOLIO</h1>
+                        <h2>SIEZE THE DAY</h1>
+                </div>
+                <div>
+                    <p>일상 속 햇살같은 따스함을 가진
+                        UI/UX디자이너 고유미 입니다.</p>
+                    <p>경험을 토대로 더 많은 것을 배우고, 계속 성장하고 발전하는 디자이너가 되고 싶습니다.</p>
+                </div>
+            </div><!-- .inner end -->
+        </section><!-- .main_visual end -->
 
-            </div><!-- .inner_top end -->
-            <div class="logo">
-                <h1>
-                    <a href="#"><img src=img/logo.png /></a>
-                </h1>
-                <div class="logo_right">
-                    <div class="search">
-                        <fieldset>
-                            <div>
-                                <label>검색어</label>
-                                <input type="text" placeholder="프리미엄 차은우 샴푸 출시" />
-                                <img src="img/🦆 icon _magnifying glass_.png" alt="수색" />
+        <section class="cont01 aboutme cont" id="aboutme">
+            <div class="inner">
+                <h2>ABOUT ME</h2>
+                <div class="box">
+                    <div class="cont01left">
+                        <img src="img/KakaoTalk_20230602_124211871.jpg" alt="고유미" />
+                        <h3>고유미 <span>(84.12.16)</span></h3>
+                        <div class="contact">
+                            <h3>Contact</h3>
+                            <div class="ct">
+                                <p>010-4096-1370</p>
+                                <p>kitianii@naver.com</p>
                             </div>
-                        </fieldset>
-                    </div><!-- .serch end -->
-                    <div class="logo_open">
-                        <img src="img/🦆 icon _hamburger menu_.png" alt="logo_open" />
+                        </div>
                     </div>
-                </div><!-- .logo_right end -->
-            </div><!-- .logo end -->
-            <div class="inner_bottom">
-                <nav>
-                    <ul>
-                        <li><a href="#">BEST</a></li>
-                        <li><a href="#">PERFUME</a></li>
-                        <li><a href="#">헤어왁스</a></li>
-                        <li><a href="#">포마드</a></li>
-                        <li><a href="#">컬크림</a></li>
-                        <li><a href="#">헤어스프레이</a></li>
-                        <li><a href="#">헤어케어</a></li>
-                        <li><a href="#">탈모케어</a></li>
-                        <li><a href="#">바디케어</a></li>
-                        <li><a href="#">스킨케어</a></li>
-                        <li><a href="#">맨즈그루밍</a></li>
-                        <li><a href="#">더마케어</a></li>
-                    </ul>
-                </nav>
+                    <div class="cont01right">
+                        <div class="education">
+                            <h3>Education</h4>
+                                <div class="ed_bottom">
+                                    <p>2023.02-2023.06</p>
+                                    <p>UI/UX 반응형 웹디자인&웹퍼블리셔(디자인&코딩)과정 수료 예정</p>
+                                    <p>그린컴퓨터 아카데미</p>
+                                </div>
+                        </div>
+                        <div class="license">
+                            <h3>License</h3>
+                            <div class="li_bottom">
+                                <p>ITQ OA마스터(A등급)</p>
+                                <p>GTQ일러스트 1급</p>
+                                <p>GTQ포토샵 1급</p>
+                                <p>운전면허 2종보통</p>
+                            </div>
+                        </div>
+                        <div class="aboutme_skill">
+                            <h3>Skill</h3>
+                            <ul id="skillbox">
+                                <li>
+                                    <div class="skilltop">
+                                        <h4>Photoshop</h4>
+                                        <h5>90%</h5>
+                                    </div>
+                                    <div class="skillbox1" id="skillbox1">
+                                        <div class="skillbox2" id="skillbox2"></div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="skilltop">
+                                        <h4>Illustrator</h4>
+                                        <h5>90%</h5>
+                                    </div>
+                                    <div class="skillbox1">
+                                        <div class="skillbox2"></div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="skilltop">
+                                        <h4>Html5, Css</h4>
+                                        <h5>80%</h5>
+                                    </div>
+                                    <div class="skillbox1">
+                                        <div class="skillbox2"></div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="skilltop">
+                                        <h4>Java script</h4>
+                                        <h5>60%</h5>
+                                    </div>
+                                    <div class="skillbox1">
+                                        <div class="skillbox2"></div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="skilltop">
+                                        <h4>jquery</h4>
+                                        <h5>60%</h5>
+                                    </div>
+                                    <div class="skillbox1">
+                                        <div class="skillbox2"></div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="skilltop">
+                                        <h4>Figma</h4>
+                                        <h5>80%</h5>
+                                    </div>
+                                    <div class="skillbox1">
+                                        <div class="skillbox2"></div>
+                                    </div>
+                                </li>
+                            </ul>
 
-            </div><!-- .inner_bottom -->
-            <nav class="close">
-                <div class="menu_close">
-                    <img src="img/close_menu.png" alt="close" />
+                        </div><!-- .aboutme_skill -->
+                    </div><!-- .cont01rigt -->
+                </div><!-- .box end -->
+            </div><!-- .inner end -->
+        </section><!-- .cont01 end -->
+
+        <section class="cont02 cont" id="web">
+            <h2>WEB</h2>
+            <div class="inner">
+                <div class="pf01">
+                    <div class="pf01_bg">
+                        <h3 class="pfTitle">
+                            <p class="pfnum">Protfolio #1</p>
+                            <!-- .pfnum end -->
+                            <p class="pfTopic">반응형 웹페이지</p>
+                            <!-- .pfTopic end -->
+                            <p class="sitename">다슈</p>
+                            <!-- .sitename end -->
+                        </h3><!-- .pfTitle end -->
+                    </div><!-- .pf01_bg end -->
+                    <div class="pfImg">
+                        <p class="pc">
+                            "pc사이트"
+                            <span></span>
+                            <i>
+                                마우스를
+                                <br />
+                                올려보세요
+                            </i>
+                        </p><!-- .pc end -->
+                        <p class="tablet animate animated" id="tablet1" data-animate="fadeInLeft" data-duration="1.5s" data-delay="0.1s" data-offset="100" >
+                            "타블렛사이트"
+                        </p>
+                        <p class="mobile animate animated" id="mobile1" data-animate="fadeInRight" data-duration="1.5s" data-delay="0.1s" data-offset="100">
+                            "모바일사이트"
+                        </p>
+                    </div>
+                    <div class="contentleft cf">
+                        <div class="left">
+                            <p class="projectName">
+                                <span>프로젝트명</span>
+                                다슈 리디자인(반응형 웹)
+                            </p>
+                            <p class="projectComposition">
+                                <span>프로젝트 구성</span>
+                                Main page
+                            </p>
+                            <p class="participation">
+                                <span>프로젝트 참여도</span>
+                                100%(1인 프로젝트)
+                            </p>
+                            <p class="tool">
+                                <span>사용툴</span>
+                                Figma, HTML, CSS, JAVA SCRIPT, JQUERY
+                            </p>
+                        </div><!-- .left end -->
+                        <div class="rightBtnSet">
+
+                        </div><!-- .rightBtnset end -->
+                        <p class="btnPc">
+                            <a href="https://hathawayum.github.io/dashu/">웹사이트 바로가기</a>
+                        </p>
+                        <p class="btnbasic">
+                            <a href="https://hairwax.co.kr/" target="_blank">기존사이트</a>
+                        </p>
+                    </div><!-- .contentleft cf end -->
+
+                </div><!-- .pf01 end -->
+
+                <div class="pf02">
+                    <div class="pf02_bg">
+                        <h3 class="pfTitle">
+                            <p class="pfnum">Protfolio #2</p>
+                            <!-- .pfnum end -->
+                            <p class="pfTopic">PC형 웹페이지</p>
+                            <!-- .pfTopic end -->
+                            <p class="sitename">CGV</p>
+                            <!-- .sitename end -->
+                        </h3><!-- .pfTitle end -->
+                    </div><!-- .pf02_bg end -->
+                    <div class="pfImg">
+                        <p class="pc">
+                            "pc사이트"
+                            <span></span>
+                            <i>
+                                마우스를
+                                <br />
+                                올려보세요
+                            </i>
+                        </p><!-- .pc end -->
+                    </div>
+                    <div class="contentleft cf">
+                        <div class="left">
+                            <p class="projectName">
+                                <span>프로젝트명</span>
+                                CGV 리디자인(PC형 웹)
+                            </p>
+                            <p class="projectComposition">
+                                <span>프로젝트 구성</span>
+                                Main page
+                            </p>
+                            <p class="participation">
+                                <span>프로젝트 참여도</span>
+                                100%(1인 프로젝트)
+                            </p>
+                            <p class="tool">
+                                <span>사용툴</span>
+                                Photoshop, HTML, CSS
+                            </p>
+                        </div><!-- .left end -->
+                        <div class="rightBtnSet">
+
+                        </div><!-- .rightBtnset end -->
+                        <p class="btnPc">
+                            <a href="https://hathawayum.github.io/cgv/" target="_blank">웹사이트 바로가기</a>
+                        </p>
+                        <p class="btnbasic">
+                            <a href="https://www.cgv.co.kr/" target="_blank">기존사이트</a>
+                        </p>
+                    </div><!-- .contentleft cf end -->
+
+                </div><!-- .pf02 end -->
+
+                <div class="pf03">
+                    <div class="pf03_bg">
+                        <h3 class="pfTitle">
+                            <p class="pfnum">Protfolio #3</p>
+                            <!-- .pfnum end -->
+                            <p class="pfTopic">PC형 웹페이지</p>
+                            <!-- .pfTopic end -->
+                            <p class="sitename"> PURADAK</p>
+                            <!-- .sitename end -->
+                        </h3><!-- .pfTitle end -->
+                    </div><!-- .pf03_bg end -->
+                    <div class="pfImg">
+                        <p class="pc">
+                            "pc사이트"
+                            <span></span>
+                            <i>
+                                마우스를
+                                <br />
+                                올려보세요
+                            </i>
+                        </p><!-- .pc end -->
+
+                    </div>
+                    <div class="contentleft cf">
+                        <div class="left">
+                            <p class="projectName">
+                                <span>프로젝트명</span>
+                                PURADAK 리디자인(반응형 웹)
+                            </p>
+                            <p class="projectComposition">
+                                <span>프로젝트 구성</span>
+                                Main page
+                            </p>
+                            <p class="participation">
+                                <span>프로젝트 참여도</span>
+                                100%(1인 프로젝트)
+                            </p>
+                            <p class="tool">
+                                <span>사용툴</span>
+                                Photoshop, HTML, CSS
+                            </p>
+                        </div><!-- .left end -->
+                        <div class="rightBtnSet">
+
+                        </div><!-- .rightBtnset end -->
+                        <p class="btnPc">
+                            <a href="https://hathawayum.github.io/puradak/" target="_blank">웹사이트 바로가기</a>
+                        </p>
+                        <p class="btnbasic">
+                            <a href="https://puradakchicken.com/main/" target="_blank">기존사이트</a>
+                        </p>
+                    </div><!-- .contentleft cf end -->
+                </div><!-- .pf03 end -->
+
+                <div class="pf04">
+                    <div class="pf04_bg">
+
+                        <h3 class="pfTitle">
+                            <p class="pfnum">Protfolio #4</p>
+                            <!-- .pfnum end -->
+                            <p class="pfTopic">모바일 웹페이지</p>
+                            <!-- .pfTopic end -->
+                            <p class="sitename">BEXCO</p>
+                            <!-- .sitename end -->
+                        </h3><!-- .pfTitle end -->
+                    </div><!-- .pf04_bg end -->
+                    <div class="pfImg">
+                        <p class="pc">
+                            "pc사이트"
+                            <span></span>
+
+                        </p><!-- .pc end -->
+                        <p class="tablet  animate animated" id="tablet2" data-animate="fadeInLeft" data-duration="1.5s"
+                            data-delay="0.1s" data-offset="100"
+                            style="animation-duration: 1.5s; animation-delay: 0.1s; visibility: visible;">
+                            "타블렛사이트"
+                        </p>
+                        <p class="mobile  animate animated" id="mobile2" data-animate="fadeInRight" data-duration="1.5s"
+                            data-delay="0.1s" data-offset="100"
+                            style="animation-duration: 1.5s; animation-delay: 0.1s; visibility: visible;">
+                            "모바일사이트"
+                        </p>
+                    </div>
+                    <div class="contentleft cf">
+                        <div class="left">
+                            <p class="projectName">
+                                <span>프로젝트명</span>
+                                BEXCO 모작(모바일 웹)
+                            </p>
+                            <p class="projectComposition">
+                                <span>프로젝트 구성</span>
+                                Main page
+                            </p>
+                            <p class="participation">
+                                <span>프로젝트 참여도</span>
+                                100%(1인 프로젝트)
+                            </p>
+                            <p class="tool">
+                                <span>사용툴</span>
+                                Figma, HTML, CSS, JAVA SCRIPT
+                            </p>
+                        </div><!-- .left end -->
+                        <div class="rightBtnSet">
+                        </div><!-- .rightBtnset end -->
+                        <p class="btnPc">
+                            <a href="https://hathawayum.github.io/bexco/" target="_blank">웹사이트 바로가기</a>
+                        </p>
+                        <p class="btnbasic">
+                            <a href="https://www.bexco.co.kr/kor/Main.do" target="_blank">기존사이트</a>
+                        </p>
+
+
+                    </div><!-- .contentleft cf end -->
+                </div><!-- .pf04 end -->
+
+
+            </div><!-- .inner end -->
+        </section><!-- .cont02 end -->
+    </main>
+
+    <section class="cont03 cont" id="design">
+        <h2>DESIGN</h2>
+        <div class="inner">
+            <div class="list">
+                <div>
+                    <a href="img/illust/그라디언트-카페.jpg" data-fancybox="images">
+                        <img src="img/illust/그라디언트-카페.jpg" alt="두코비카페" />
+                    </a>
+                    <p>일러스트레이터</p>
+                </div>
+                <div>
+                    <a href="img/illust/그라디언트-카페2.jpg" data-fancybox="images">
+                        <img src="img/illust/그라디언트-카페2.jpg" alt="두코비카페" />
+                    </a>
+                    <p>일러스트레이터</p>
+                </div>
+                <div>
+                    <a href="img/illust/일러스트-2.jpg" data-fancybox="images">
+                        <img src="img/illust/일러스트-2.jpg" alt="네일아트" />
+                    </a>
+                    <p>일러스트레이터</p>
+                </div>
+                <div>
+                    <a href="img/illust/일러스트-2_1.jpg" data-fancybox="images">
+                        <img src="img/illust/일러스트-2_1.jpg" alt="careforcoffee" />
+                    </a>
+                    <p>일러스트레이터</p>
+                </div>
+                <div>
+                    <a href="img/photoshop/026_메디힐진정라인.jpg" data-fancybox="images">
+                        <img src="img/photoshop/026_메디힐진정라인.jpg" alt="메디힐진정라인" />
+                    </a>
+                    <p>포토샾</p>
+                </div>
+                <div>
+                    <a href="img/photoshop/018_달고나라떼1.jpg" data-fancybox="images">
+                        <img src="img/photoshop/018_달고나라떼1.jpg" alt="달고나라떼" />
+                    </a>
+                    <p>포토샾</p>
+                </div>
+                <div>
+                    <a href="img/photoshop/017_몬트커피.jpg" data-fancybox="images">
+                        <img src="img/photoshop/017_몬트커피.jpg" alt="몬트커피" />
+                    </a>
+                    <p>포토샾</p>
+                </div>
+                <div>
+                    <a href="img/photoshop/016_영인가배3.jpg" data-fancybox="images">
+                        <img src="img/photoshop/016_영인가배3.jpg" alt="영인가배" />
+                    </a>
+                    <p>포토샾</p>
+                </div>
+                <div>
+                    <a href="img/photoshop/034_하고싶은거하세요1.jpg" data-fancybox="images">
+                        <img src="img/photoshop/034_하고싶은거하세요1.jpg" alt="홍철책방" />
+                    </a>
+                    <p>포토샾</p>
+                </div>
+                <div>
+                    <a href="img/photoshop/035_하고싶은거하세요2.png" data-fancybox="images">
+                        <img src="img/photoshop/035_하고싶은거하세요2.png" alt="홍철책방2" />
+                    </a>
+                    <p>포토샾</p>
+                </div>
+                <div>
+                    <a href="img/illust/summernight.png" data-fancybox="images">
+                        <img src="img/illust/summernight.png" alt="summernight" />
+                    </a>
+                    <p>일러스트</p>
+                </div>
+                <div>
+                    <a href="img/illust/포스터1.png" data-fancybox="images">
+                        <img src="img/illust/포스터1.png" alt="포스터" />
+                    </a>
+                    <p>일러스트</p>
+                </div>
+                <div>
+                    <a href="img/photoshop/뮤지컬현수막_고유미.jpg" data-fancybox="images">
+                        <img src="img/photoshop/뮤지컬현수막_고유미.jpg" alt="뮤지컬현수막" />
+                    </a>
+                    <p>포토샾</p>
+                </div>
+                <div>
+                    <a href="img/photoshop/연주회초대장_고유미.jpg" data-fancybox="images">
+                        <img src="img/photoshop/연주회초대장_고유미.jpg" alt="연주회초대장" />
+                    </a>
+                    <p>포토샾</p>
+                </div>
+                <div>
+                    <a href="img/photoshop/광고원본2.png" data-fancybox="images">
+                        <img src="img/photoshop/광고원본2.png" alt="신문광고원본" />
+                    </a>
+                    <p>포토샾</p>
+                </div>
+                <div>
+                    <a href="img/photoshop/광고작업수정-최종본.jpg" data-fancybox="images">
+                        <img src="img/photoshop/광고작업수정-최종본.jpg" alt="신문광고작업" />
+                    </a>
+                    <p>포토샾</p>
                 </div>
 
-                <div class="menu_middle">
-                    <ul>
-                        <li class="depth01">
-                            <a href="#">BEST</a>
-                        </li>
-                        <li class="depth01">
-                            <a href="#">PERFUME</a>
-                            <ul class="depth02">
-                                <li><a href="#">퍼퓸</a></li>
-                                <li><a href="#">퍼퓸세트</a></li>
-                                <li><a href="#">바디 스프레이</a></li>
-                            </ul>
-                        </li>
-                        <li class="depth01">
-                            <a href="#">헤어왁스</a>
-                        </li>
-                        <li class="depth01">
-                            <a href="#">포마드</a>
-                        </li>
-                        <li class="depth01">
-                            <a href="#">컬크림</a>
-                        </li>
-                        <li class="depth01">
-                            <a href="#">헤어스프레이</a>
-                        </li>
-                        <li class="depth01">
-                            <a href="#">헤어케어</a>
-                            <ul class="depth02">
-                                <li><a href="#">샴푸/트리트먼트</a></li>
-                                <li><a href="#">토닉/에센스</a></li>
-                                <li><a href="#">셀프펌(다운펌+염색약)</a></li>
-                                <li><a href="#">세트</a></li>
-                            </ul>
-                        </li>
-                        <li class="depth01">
-                            <a href="#">탈모케어</a>
-                            <ul class="depth02">
-                                <li><a href="#">탈모 스타일링</a></li>
-                                <li><a href="#">탈모샴푸/트리트먼트</a></li>
-                                <li><a href="#">탈모헤어쿠션</a></li>
-                                <li><a href="#">세트</a></li>
-                            </ul>
-                        </li>
-                        <li class="depth01">
-                            <a href="#">바디케어</a>
-                            <ul class="depth02">
-                                <li><a href="#">아크네 라인(피부진정)</a></li>
-                                <li><a href="#">바디워시</a></li>
-                                <li><a href="#">바디스프레이</a></li>
-                                <li><a href="#">풋케어</a></li>
-                                <li><a href="#">세트</a></li>
-                            </ul>
-                        </li>
-                        <li class="depth01">
-                            <a href="#">스킨케어</a>
-                            <ul class="depth02">
-                                <li><a href="#">올인원 로션/토너</a></li>
-                                <li><a href="#">클렌징</a></li>
-                                <li><a href="#">선케어</a></li>
-                                <li><a href="#">더마케어</a></li>
-                                <li><a href="#">맨즈그루밍</a></li>
-                                <li><a href="#">세트</a></li>
-                            </ul>
-                        </li>
-                        <li class="depth01">
-                            <a href="#">맨즈그루밍</a>
-                        </li>
-                        <li class="depth01">
-                            <a href="#">더마케어</a>
-                        </li>
-                    </ul>
-                </div><!-- .menu_middle end -->
-            </nav>
+
+            </div><!-- .list end -->
 
 
         </div><!-- .inner end -->
-    </header>
+    </section><!-- .cont03 end -->
 
-    <main>
-        <div class="swiper main_visual">
-            <div class="swiper-wrapper">
-                <div class="swiper-slide">
-                    <img src="img/20211230_hairwax_cha_eun_woo_mainbanner.jpg" alt="차은우" />
+    <section class="cont04 cont" id="photograph">
+        <h2>PHOTOGRAPH</h2>
+        <div class="inner">
+            <div class="list">
+                <div>
+                    <a href="img/photography/KakaoTalk_20230607_153454128_14.jpg" data-fancybox="images">
+                        <img src="img/photography/KakaoTalk_20230607_153454128_14.jpg" alt="분홍꽃" />
+                    </a>
                 </div>
-                <div class="swiper-slide">
-                    <img src="img/20230223_hairwax_pro_airy_polish_oil_mainbanner.jpg" alt="airy polish oil" />
+                <div>
+                    <a href="img/photography/KakaoTalk_20230607_153454128_12.jpg" data-fancybox="images">
+                        <img src="img/photography/KakaoTalk_20230607_153454128_12.jpg" alt="하트모양꽃" />
+                    </a>
                 </div>
-                <div class="swiper-slide">
-                    <img src="img/20230309_hairwax_stick_founation_mainbanner.jpg" alt="stick founation" />
+                <div>
+                    <a href="img/photography/KakaoTalk_20230607_153609461_06.jpg" data-fancybox="images">
+                        <img src="img/photography/KakaoTalk_20230607_153609461_06.jpg" alt="민들레" />
+                    </a>
                 </div>
-                <div class="swiper-slide">
-                    <img src="img/20230407_hairwax_down_cream_mainbanner.jpg" alt="down cream" />
+                <div>
+                    <a href="img/photography/KakaoTalk_20230607_153609461_22.jpg" data-fancybox="images">
+                        <img src="img/photography/KakaoTalk_20230607_153609461_22.jpg" alt="소녀와개" />
+                    </a>
                 </div>
-                <div class="swiper-slide">
-                    <img src="img/20221213_hairwax_grooming_tonic_foam_mainbanner.jpg" alt="tonic foam" />
+                <div>
+                    <a href="img/photography/KakaoTalk_20230607_153703381_17.jpg" data-fancybox="images">
+                        <img src="img/photography/KakaoTalk_20230607_153703381_17.jpg" alt="꽃집" />
+                    </a>
                 </div>
-                <div class="swiper-slide">
-                    <img src="img/20220211_dashu_7years_event_pc_mainbanner.jpg" alt="dashu 7years event" />
+                <div>
+                    <a href="img/photography/KakaoTalk_20230607_153703381_15.jpg" data-fancybox="images">
+                        <img src="img/photography/KakaoTalk_20230607_153703381_15.jpg" alt="토끼와곰" />
+                    </a>
                 </div>
-                <div class="swiper-slide">
-                    <img src="img/20211202_hairwax_application_mainbanner_01.jpg" alt="application mainbanner" />
+                <div>
+                    <a href="img/photography/KakaoTalk_20230607_153609461_25.jpg" data-fancybox="images">
+                        <img src="img/photography/KakaoTalk_20230607_153609461_25.jpg" alt="드림캐쳐" />
+                    </a>
                 </div>
-            </div>
-            <!-- <div class="swiper-button-next"></div>
-            <div class="swiper-button-prev"></div> -->
-            <div class="swiper-pagination"></div>
-        </div><!-- .main_visual end -->
-
-        <section class="cont01">
-            <div class="inner">
-                <div class="inner_top">
-                    <h3>MD’S PICK</h3>
-                    <h3>NEW ALLIVAL</h3>
-                </div><!-- .inner_top end -->
-                <div class="inner_bottom">
-                    <div class="swiper cont01_01">
-                        <div class="swiper-wrapper">
-                            <div class="swiper-slide">
-                                <figure>
-                                    <a href="#">
-                                        <img src="img/5a5984eb8f7fdffb89244ceb0abb67f8.jpg" alt="그루밍토닉" />
-                                    </a>
-                                </figure>
-                                <div>
-                                    <h4>[펌프형 200ml] 다슈 클래식 스타일 그루밍 토닉+콤브 빗 증정</h4>
-                                    <p>완판템 그루밍토닉, 간편하게 펌프로! </p>
-                                    <span>18,000원</span>
-                                    <strong>12,800원</strong>
-                                    <p>사용후기: 611</p>
-                                </div>
-                            </div>
-                            <div class="swiper-slide">
-                                <figure>
-                                    <a href="#">
-                                        <img src="img/8f64263bbd8a37b1171f05a3005bdf57.jpg" alt="멀티커버스틱 파운데이션1호" />
-                                    </a>
-                                </figure>
-                                <div>
-                                    <h4>다슈 맨즈 멀티 커버 스틱 파운데이션 1호 [라이트베이지]</h4>
-                                    <p>밝은 피부용 실패 없는 피부표현! </p>
-                                    <span>29,000원</span>
-                                    <strong>26,200원</strong>
-                                    <p>사용후기: 21</p>
-                                </div>
-                            </div>
-                            <div class="swiper-slide">
-                                <figure>
-                                    <a href="#">
-                                        <img src="img/6a07c700bf6bf04c7f83fddf48ba532b.jpg" alt="그루밍토닉" />
-                                    </a>
-                                </figure>
-                                <div>
-                                    <h4>[다슈 콤브 빗 증정] 다슈 클래식 스타일 그루밍 토닉 200ml</h4>
-                                    <p>그루밍 토닉으로 드라이와 스타일링을 한번에</p>
-                                    <span>18,000원</span>
-                                    <strong>12,800원</strong>
-                                    <p>사용후기: 2,415</p>
-                                </div>
-                            </div>
-                            <div class="swiper-slide">
-                                <figure>
-                                    <a href="#">
-                                        <img src="img/19c0bb2ceead4b56e5f01d46e84e78d3.jpg" alt="유브이 컷 골프패치" />
-                                    </a>
-                                </figure>
-                                <div>
-                                    <h4>다슈 데일리 유브이 컷 골프 패치</h4>
-                                    <p>언제 어디서나 간편하게 착! 외부 활동시 필수템</p>
-                                    <span>15,000원</span>
-                                    <strong>12,800원</strong>
-                                    <p>사용후기: 29</p>
-                                </div>
-                            </div>
-                            <div class="swiper-slide">
-                                <figure>
-                                    <a href="#">
-                                        <img src="img/fa79777bb3542ee0477a0b1ea5218d35.jpg" alt="매직커버 니플밴드" />
-                                    </a>
-                                </figure>
-                                <div>
-                                    <h4>다슈 맨즈 매직 커버 니플 밴드 2개입</h4>
-                                    <p>옷 입기전 착! 2초 니플밴드면 찌셔츠 걱정 끝!</p>
-                                    <span>24,000원</span>
-                                    <strong>11,900원</strong>
-                                    <p>사용후기: 1,783</p>
-                                </div>
-                            </div>
-                            <div class="swiper-slide">
-                                <figure>
-                                    <a href="#">
-                                        <img src="img/4b9e5fc69d1f5590ae6d74391ff5076e.jpg" alt="데일리 쿨링 스칼프 스프레이" />
-                                    </a>
-                                </figure>
-                                <div>
-                                    <h4>다슈 데일리 쿨링 스칼프 스프레이 200ml</h4>
-                                    <p>알래스카 빙하수로 만든 쿨링스프레이로 여름철 두피케어!!</p>
-                                    <span>25,000원</span>
-                                    <strong>14,800원</strong>
-                                    <p>사용후기: 215</p>
-                                </div>
-                            </div>
-                            <div class="swiper-slide">
-                                <figure>
-                                    <a href="#">
-                                        <img src="img/8e5a39a610f024f997d8654852c8744b.jpg" alt="포맨 울트라 홀딩 파워 튜브 왁스" />
-                                    </a>
-                                </figure>
-                                <div>
-                                    <h4>다슈 포맨 울트라 홀딩 파워 튜브 왁스 120ml</h4>
-                                    <p>완판템 그루밍토닉, 간편하게 펌프로! </p>
-                                    <span>18,000원</span>
-                                    <strong>9,500원</strong>
-                                    <p>사용후기: 103</p>
-                                </div>
-                            </div>
-                            <div class="swiper-slide">
-                                <figure>
-                                    <a href="#">
-                                        <img src="img/e7164ae2ac63912e21f3465c6b3d92ed.jpg" alt="데일리 웨트 컬크림" />
-                                    </a>
-                                </figure>
-                                <div>
-                                    <h4>다슈 데일리 웨트 컬크림 150ml</h4>
-                                    <p>젖은 머리 스타일링의 정석!</p>
-                                    <span>25,000원</span>
-                                    <strong>10,500원</strong>
-                                    <p>사용후기: 1,409</p>
-                                </div>
-                            </div>
-                            <div class="swiper-slide">
-                                <figure>
-                                    <a href="#">
-                                        <img src="img/1ffa9408823e13e3999812ab8c500f2b.jpg"
-                                            alt="다슈 포 맨 밤부 포레스트 메가 하드 스프레이 180ml" />
-                                    </a>
-                                </figure>
-                                <div>
-                                    <h4>다슈 포 맨 밤부 포레스트 메가 하드 스프레이 180ml</h4>
-                                    <p>~</p>
-                                    <span>15,000원</span>
-                                    <strong>9,800원</strong>
-                                    <p>사용후기: 670</p>
-                                </div>
-                            </div>
-                            <div class="swiper-slide">
-                                <figure>
-                                    <a href="#">
-                                        <img src="img/d082b92eaeb0060f37d17d41de557033.jpg"
-                                            alt="다슈 맨즈 컬러 체인지 모이스처 립밤" />
-                                    </a>
-                                </figure>
-                                <div>
-                                    <h4>다슈 맨즈 컬러 체인지 모이스처 립밤</h4>
-                                    <p>촉촉한 보습과 생기를 한번에!</p>
-                                    <span>18,000원</span>
-                                    <strong>10,900원</strong>
-                                    <p>사용후기: 192</p>
-                                </div>
-                            </div>
-                            <div class="swiper-slide">
-                                <figure>
-                                    <a href="#">
-                                        <img src="img/75819c5bf9ec5e68ec399090554ecc0a.jpg"
-                                            alt="다슈 데일리 아크네 쿨링 바디워시 500ml" />
-                                    </a>
-                                </figure>
-                                <div>
-                                    <h4>다슈 데일리 아크네 쿨링 바디워시 500ml</h4>
-                                    <p>여드름성 피부완화 기능성 쿨링 바디워시</p>
-                                    <span>25,000원</span>
-                                    <strong>16,800원</strong>
-                                    <p>사용후기: 235</p>
-                                </div>
-                            </div>
-                            <div class="swiper-slide">
-                                <figure>
-                                    <a href="#">
-                                        <img src="img/fc5fcfaecce30f8694ece52a4def6e72.jpg"
-                                            alt=" 다슈 보타닉 리프 퍼퓸 향수 50ml" />
-                                    </a>
-                                </figure>
-                                <div>
-                                    <h4>다슈 보타닉 리프 퍼퓸 향수 50ml</h4>
-                                    <p>정원과 바람, 자연의 향!</p>
-                                    <span>48,000원</span>
-                                    <strong>36,800원</strong>
-                                    <p>사용후기: 359</p>
-                                </div>
-                            </div>
-                            <div class="swiper-slide">
-                                <figure>
-                                    <a href="#">
-                                        <img src="img/8f64263bbd8a37b1171f05a3005bdf57.jpg"
-                                            alt="다슈 맨즈 멀티 커버 스틱 파운데이션 2호 [뉴트럴베이지]" />
-                                    </a>
-                                </figure>
-                                <div>
-                                    <h4>다슈 맨즈 멀티 커버 스틱 파운데이션 2호 [뉴트럴베이지]</h4>
-                                    <p>어두운 피부용! 실패없는 피부 메이크업</p>
-                                    <span>29,000원</span>
-                                    <strong>26,200원</strong>
-                                    <p>사용후기: 62</p>
-                                </div>
-                            </div>
-                            <div class="swiper-slide">
-                                <figure>
-                                    <a href="#">
-                                        <img src="img/2d01f55f5665a6909913ba3843ae0d37.jpg"
-                                            alt=" 다슈 데일리 씨솔트 헤어 픽서 180ml" />
-                                    </a>
-                                </figure>
-                                <div>
-                                    <h4> 다슈 데일리 씨솔트 헤어 픽서 180ml</h4>
-                                    <p>어두운 피부용! 실패없는 피부 메이크업</p>
-                                    <span>25,000원</span>
-                                    <strong>13,800원</strong>
-                                    <p>사용후기: 145</p>
-                                </div>
-                            </div>
-
-                        </div>
-                        <!-- <div class="swiper-button-next"></div>
-                        <div class="swiper-button-prev"></div> -->
-                        <div class="swiper-pagination"></div>
-                    </div>
-                    <div class="swiper cont01_02">
-                        <div class="swiper-wrapper">
-                            <div class="swiper-slide">
-                                <figure>
-                                    <a href="#">
-                                        <img src="img/402aeeb22d5f9a6f41d085f71c68edd8.jpg"
-                                            alt=" 다슈 데일리 스타일링 볼륨 컬링 폼 200ml" />
-                                    </a>
-                                </figure>
-                                <div>
-                                    <h4>다슈 데일리 스타일링 볼륨 컬링 폼 200ml</h4>
-                                    <p>컬링 폼으로 굳지 않는 가벼운 질감 표현</p>
-                                    <span>25,000원</span>
-                                    <strong>12,000원</strong>
-                                    <p>사용후기: 4</p>
-                                </div>
-                            </div>
-                            <div class="swiper-slide">
-                                <figure>
-                                    <a href="#">
-                                        <img src="img/ff784a2412d3a5ed6660fb08a60f7216.jpg"
-                                            alt=" 다슈 라이크 로터스 내추럴 젤 오리지널 100ml" />
-                                    </a>
-                                </figure>
-                                <div>
-                                    <h4>다슈 라이크 로터스 내추럴 젤 오리지널 100ml</h4>
-                                    <p>끈적임 없이 오래 지속되는 촉촉함! </p>
-                                    <span>25,000원</span>
-                                    <strong>15,800원</strong>
-                                    <p>사용후기: 14</p>
-                                </div>
-                            </div>
-                            <div class="swiper-slide">
-                                <figure>
-                                    <a href="#">
-                                        <img src="img/19e59c28f6af1c778285f703162ece71.jpg"
-                                            alt="[다슈 콤브빗 증정]다슈 클래식 스타일 그루밍 토닉 폼 200ml" />
-                                    </a>
-                                </figure>
-                                <div>
-                                    <h4>[다슈 콤브빗 증정]다슈 클래식 스타일 그루밍 토닉 폼 200ml</h4>
-                                    <p>완판템 그루밍토닉 UPGRADE, 균일한 발림성 폼 제형 </p>
-                                    <span>18,000원</span>
-                                    <strong>12,800원</strong>
-                                    <p>사용후기: 268</p>
-                                </div>
-                            </div>
-                            <div class="swiper-slide">
-                                <figure>
-                                    <a href="#">
-                                        <img src="img/8a5c6eb9e9b7e1b8881b183a40de281c.jpg"
-                                            alt=" 다슈 데일리 구강청결제 [쿨민트향] 800ml" />
-                                    </a>
-                                </figure>
-                                <div>
-                                    <h4>다슈 데일리 구강청결제 [쿨민트향] 800ml</h4>
-                                    <p>무색소 쿨민트향</p>
-                                    <span>15,000원</span>
-                                    <strong>9,900원</strong>
-                                    <p>사용후기: 7</p>
-                                </div>
-                            </div>
-                            <div class="swiper-slide">
-                                <figure>
-                                    <a href="#">
-                                        <img src="img/e925c84629a0b844bd93611365a46e29.jpg"
-                                            alt=" 다슈 라이크 001 워터리 울트라 씬 12개입" />
-                                    </a>
-                                </figure>
-                                <div>
-                                    <h4>다슈 라이크 001 워터리 울트라 씬 12개입</h4>
-                                    <p>부드러운 사용감 천연 라텍스 콘돔 </p>
-                                    <span>25,000원</span>
-                                    <strong>11,900원</strong>
-                                    <p>사용후기: 3</p>
-                                </div>
-                            </div>
-                            <div class="swiper-slide">
-                                <figure>
-                                    <a href="#">
-                                        <img src="img/c1b6d5a23ca28ab6919c6da621efb51e.jpg"
-                                            alt=" 다슈 라이크 001 워터리 마이크로 씬 10개입" />
-                                    </a>
-                                </figure>
-                                <div>
-                                    <h4>다슈 라이크 001 워터리 마이크로 씬 10개입</h4>
-                                    <p>리얼 밀착감 천연 라텍스 콘돔 </p>
-                                    <span>36,000원</span>
-                                    <strong>13,900원</strong>
-                                    <p>사용후기: 6</p>
-                                </div>
-                            </div>
-                            <div class="swiper-slide">
-                                <figure>
-                                    <a href="#">
-                                        <img src="img/368d63511945e9ba99bac06f7eb978b5.jpg"
-                                            alt=" 다슈 프로 에어리 폴리쉬 오일 100ml" />
-                                    </a>
-                                </figure>
-                                <div>
-                                    <h4>다슈 프로 에어리 폴리쉬 오일 100ml</h4>
-                                    <p>모발의 질감 극대화 자연스러운 웨트 스타일 연출 </p>
-                                    <span>21,000원</span>
-                                    <strong>17,900원</strong>
-                                    <p>사용후기: 65</p>
-                                </div>
-                            </div>
-                            <div class="swiper-slide">
-                                <figure>
-                                    <a href="#">
-                                        <img src="img/24d84b6f8795f203915b5e0e3862bf46.jpg"
-                                            alt="다슈 프로 에어리 폴리쉬 오일 150ml" />
-                                    </a>
-                                </figure>
-                                <div>
-                                    <h4>다슈 프로 에어리 폴리쉬 오일 150ml</h4>
-                                    <p>모발의 질감 극대화 자연스러운 웨트 스타일 연출</p>
-                                    <span>32,000원</span>
-                                    <strong>23,900원</strong>
-                                    <p>사용후기: 31</p>
-                                </div>
-                            </div>
-                            <div class="swiper-slide">
-                                <figure>
-                                    <a href="#">
-                                        <img src="img/9ded08a19fb486133ef752038503a826.jpg"
-                                            alt=" 다슈 프로 에어리 폴리쉬 오일 30ml" />
-                                    </a>
-                                </figure>
-                                <div>
-                                    <h4>다슈 프로 에어리 폴리쉬 오일 30ml</h4>
-                                    <p>모발의 질감 극대화 자연스러운 웨트 스타일 연출 </p>
-                                    <span>15,000원</span>
-                                    <strong>11,800원</strong>
-                                    <p>사용후기: 4</p>
-                                </div>
-                            </div>
-                            <div class="swiper-slide">
-                                <figure>
-                                    <a href="#">
-                                        <img src="img/8f64263bbd8a37b1171f05a3005bdf57.jpg"
-                                            alt=" 다슈 맨즈 멀티 커버 스틱 파운데이션 2호 [뉴트럴베이지]" />
-                                    </a>
-                                </figure>
-                                <div>
-                                    <h4>다슈 맨즈 멀티 커버 스틱 파운데이션 2호 [뉴트럴베이지]</h4>
-                                    <p>어두운 피부용! 실패없는 피부 메이크업</p>
-                                    <span>29,000원</span>
-                                    <strong>26,200원</strong>
-                                    <p>사용후기: 62</p>
-                                </div>
-                            </div>
-                            <div class="swiper-slide">
-                                <figure>
-                                    <a href="#">
-                                        <img src="img/0757346ef3e8567d38ce8c1ac41837a0.jpg"
-                                            alt=" 다슈 맨즈 멀티 커버 스틱 파운데이션 1호 [라이트베이지]" />
-                                    </a>
-                                </figure>
-                                <div>
-                                    <h4>다슈 맨즈 멀티 커버 스틱 파운데이션 1호 [라이트베이지]</h4>
-                                    <p>밝은 피부용 실패 없는 피부표현!</p>
-                                    <span>29,000원</span>
-                                    <strong>26,200원</strong>
-                                    <p>사용후기: 23</p>
-                                </div>
-                            </div>
-                            <div class="swiper-slide">
-                                <figure>
-                                    <a href="#">
-                                        <img src="img/4617cfbd18dfda88a829229669b18f70.jpg"
-                                            alt=" 다슈 포 맨 단백질 다운 크림 100ml" />
-                                    </a>
-                                </figure>
-                                <div>
-                                    <h4>다슈 포 맨 단백질 다운 크림 100ml</h4>
-                                    <p>순하고 확실하게 옆머리 완벽 밀착!</p>
-                                    <span>21,000원</span>
-                                    <strong>14,400원</strong>
-                                    <p>사용후기: 28</p>
-                                </div>
-                            </div>
-                            <div class="swiper-slide">
-                                <figure>
-                                    <a href="#">
-                                        <img src="img/2235c6101d6c20ff0b9c234bb60d9c7e.jpg"
-                                            alt=" 달리프 글램 폴리쉬 오일 100ml" />
-                                    </a>
-                                </figure>
-                                <div>
-                                    <h4>달리프 글램 폴리쉬 오일 100ml</h4>
-                                    <p>웨트 스타일링의 정석 달리프 폴리쉬 오일</p>
-                                    <span>21,000원</span>
-                                    <strong>17,900원</strong>
-                                    <p>사용후기: 1</p>
-                                </div>
-                            </div>
-                            <div class="swiper-slide">
-                                <figure>
-                                    <a href="#">
-                                        <img src="img/2a50963312a31db8e20044f07d594001.jpg"
-                                            alt=" 다슈 라이크 로터스 내추럴 젤 워밍 100ml" />
-                                    </a>
-                                </figure>
-                                <div>
-                                    <h4>다슈 라이크 로터스 내추럴 젤 워밍 100ml</h4>
-                                    <p>따뜻한 온열감으로 마르지 않는 바디 젤</p>
-                                    <span>25,000원</span>
-                                    <strong>15,800원</strong>
-                                    <p>사용후기: 0</p>
-                                </div>
-                            </div>
-                            <div class="swiper-slide">
-                                <figure>
-                                    <a href="#">
-                                        <img src="img/402aeeb22d5f9a6f41d085f71c68edd8.jpg"
-                                            alt=" 다슈 데일리 스타일링 볼륨 컬링 폼 200ml" />
-                                    </a>
-                                </figure>
-                                <div>
-                                    <h4>다슈 데일리 스타일링 볼륨 컬링 폼 200ml</h4>
-                                    <p>컬링 폼으로 굳지 않는 가벼운 질감 표현</p>
-                                    <span>25,000원</span>
-                                    <strong>12,000원</strong>
-                                    <p>사용후기: 4</p>
-                                </div>
-                            </div>
-                            <div class="swiper-slide">
-                                <figure>
-                                    <a href="#">
-                                        <img src="img/06c8bde052f7032d2af0a7ace4dacacc.jpg"
-                                            alt=" 다슈 라이크 로터스 내추럴 젤 오리지널 100ml" />
-                                    </a>
-                                </figure>
-                                <div>
-                                    <h4>다슈 라이크 로터스 내추럴 젤 오리지널 100ml</h4>
-                                    <p>어두운 피부용! 실패없는 피부 메이크업</p>
-                                    <span>25,000원</span>
-                                    <strong>15,800원</strong>
-                                    <p>사용후기: 14</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="swiper-button-next"></div>
-                        <div class="swiper-button-prev"></div>
-                        <div class="swiper-pagination"></div>
-                    </div>
-                </div>
-            </div><!-- .inner end -->
-
-        </section><!-- .cont01 end -->
-
-        <section class="cont02">
-            <div class="inner">
-                <div class="swiper cont02_01">
-                    <div class="swiper-wrapper">
-                        <div class="swiper-slide">
-                            <img src="img/perfume.png" alt="PERFUME" />
-                        </div>
-                        <div class="swiper-slide">
-                            <img src="img/bfb3349d93a52056a98c69bfc165daf0.jpg" alt="Men's style" />
-                        </div>
-                        <div class="swiper-slide">
-                            <img src="img/94a3587ca99ab154280c331448516734.jpg" alt="Hair care" />
-                        </div>
-                        <div class="swiper-slide">
-                            <img src="img/739ef40b1fce0e2a2741afcb5ef60fd6.jpg" alt="Body care" />
-                        </div>
-                        <div class="swiper-slide">
-                            <img src="img/c66de391d104140bb50edc25590e72a4.jpg" alt="Men's" />
-                        </div>
-                        <div class="swiper-slide">
-                            <img src="img/8d4a7525fc44e2217f6f4e68bc4337a4.jpg" alt="Derma care" />
-                        </div>
-
-                    </div>
-                 <!--    <div class="swiper-button-next"></div>
-                    <div class="swiper-button-prev"></div> -->
-                    <div class="swiper-pagination"></div>
-
-                </div>
-
-        </section><!-- .cont02 end -->
-
-        <section class="cont03">
-            <div class="inner">
-                <div class="list">
-                    <div class="item">
-                        <h3>웨트 스타일의 정석 다슈 폴리쉬 오일</h3>
-
-                        <div>
-                            <video controls autoplay muted loop>
-                                <source src="img/20230407dashu_polish_oil_video.mp4" type="video/mp4" />
-                            </video>
-                        </div>
-                    </div><!-- .item end 1 -->
-                    <div class="item">
-                        <h3>YouTube IN DASHU</h3>
-
-                        <div>
-                            <video controls autoplay muted loop>
-                                <source src="img/20220810_video.mp4" type="video/mp4" />
-                            </video>
-                        </div>
-                    </div><!-- .item end 2 -->
-                    <div class="item">
-                        <h3>다슈 X 차은우</h3>
-
-                        <div>
-                            <video controls autoplay muted loop>
-                                <source src="img/20230407_vogue_dashu_video.mp4" type="video/mp4" />
-                            </video>
-                        </div>
-                    </div><!-- .item end 3 -->
-                </div>
-            </div>
-        </section>
-
-        <section class="cont04">
-            <div class="inner">
-
-                <h3>전체 제품보기</h3>
-                <div class="list">
-                    <div class="item">
-                        <figure>
-                            <a href="#">
-                                <img src="img/402aeeb22d5f9a6f41d085f71c68edd8.jpg" alt="다슈 데일리 스타일링 볼륨 컬링 폼 200ml" />
-                            </a>
-                        </figure>
-                        <div>
-                            <h4>다슈 데일리 스타일링 볼륨 컬링 폼 200ml</h4>
-                            <p>컬링 폼으로 굳지 않는 가벼운 질감 표현</p>
-                            <span>25,000원</span>
-                            <strong>12,000원</strong>
-                            <p>사용후기: 4</p>
-                        </div>
-
-                    </div><!-- .item end -->
-                    <div class="item">
-                        <figure>
-                            <a href="#">
-                                <img src="img/2a50963312a31db8e20044f07d594001.jpg" alt=" 다슈 라이크 로터스 내추럴 젤 워밍 100ml" />
-                            </a>
-                        </figure>
-                        <div>
-                            <h4>다슈 라이크 로터스 내추럴 젤 워밍 100ml</h4>
-                            <p>따뜻한 온열감으로 마르지 않는 바디 젤</p>
-                            <span>25,000원</span>
-                            <strong>15,800원</strong>
-                            <p>사용후기: 0</p>
-                        </div>
-                    </div><!-- .item end -->
-
-                    <div class="item">
-                        <figure>
-                            <a href="#">
-                                <img src="img/2e8fadbc3b9d7abf9313720c9ace8318.jpg" alt="다슈 데일리 유브이 컷 골프 패치 5회분" />
-                            </a>
-                        </figure>
-                        <div>
-                            <h4>다슈 데일리 유브이 컷 골프 패치 5회분</h4>
-                            <p>언제 어디서나 간편하게 착! 외부 활동시 필수템</p>
-                            <span>15,000원</span>
-                            <strong>12,800원</strong>
-                            <p>사용후기: 29</p>
-                        </div>
-
-                    </div><!-- .item end -->
-                    <div class="item">
-                        <figure>
-                            <a href="#">
-                                <img src="img/4617cfbd18dfda88a829229669b18f70.jpg" alt=" 다슈 포 맨 단백질 다운 크림 100ml" />
-                            </a>
-                        </figure>
-                        <div>
-                            <h4>다슈 포 맨 단백질 다운 크림 100ml</h4>
-                            <p>순하고 확실하게 옆머리 완벽 밀착!</p>
-                            <span>21,000원</span>
-                            <strong>14,400원</strong>
-                            <p>사용후기: 28</p>
-                        </div>
-
-                    </div><!-- .item end -->
-                    <div class="item">
-                        <figure>
-                            <a href="#">
-                                <img src="img/0757346ef3e8567d38ce8c1ac41837a0.jpg"
-                                    alt=" 다슈 맨즈 멀티 커버 스틱 파운데이션 1호 [라이트베이지]" />
-                            </a>
-                        </figure>
-                        <div>
-                            <h4>다슈 맨즈 멀티 커버 스틱 파운데이션 1호 [라이트베이지]</h4>
-                            <p>밝은 피부용 실패 없는 피부표현!</p>
-                            <span>29,000원</span>
-                            <strong>26,200원</strong>
-                            <p>사용후기: 23</p>
-                        </div>
-
-                    </div><!-- .item end -->
-                    <div class="item">
-                        <figure>
-                            <a href="#">
-                                <img src="img/8f64263bbd8a37b1171f05a3005bdf57.jpg"
-                                    alt=" 다슈 맨즈 멀티 커버 스틱 파운데이션 2호 [뉴트럴베이지]" />
-                            </a>
-                        </figure>
-                        <div>
-                            <h4>다슈 맨즈 멀티 커버 스틱 파운데이션 2호 [뉴트럴베이지]</h4>
-                            <p>어두운 피부용! 실패없는 피부 메이크업</p>
-                            <span>29,000원</span>
-                            <strong>26,200원</strong>
-                            <p>사용후기: 62</p>
-                        </div>
-
-                    </div><!-- .item end -->
-                    <div class="item">
-                        <figure>
-                            <a href="#">
-                                <img src="img/9ded08a19fb486133ef752038503a826.jpg" alt=" 다슈 프로 에어리 폴리쉬 오일 30ml" />
-                            </a>
-                        </figure>
-                        <div>
-                            <h4>다슈 프로 에어리 폴리쉬 오일 30ml</h4>
-                            <p>모발의 질감 극대화 자연스러운 웨트 스타일 연출 </p>
-                            <span>15,000원</span>
-                            <strong>11,800원</strong>
-                            <p>사용후기: 4</p>
-                        </div>
-
-                    </div><!-- .item end -->
-                    <div class="item">
-                        <figure>
-                            <a href="#">
-                                <img src="img/368d63511945e9ba99bac06f7eb978b5.jpg" alt=" 다슈 프로 에어리 폴리쉬 오일 100ml" />
-                            </a>
-                        </figure>
-                        <div>
-                            <h4>다슈 프로 에어리 폴리쉬 오일 100ml</h4>
-                            <p>모발의 질감 극대화 자연스러운 웨트 스타일 연출 </p>
-                            <span>21,000원</span>
-                            <strong>17,900원</strong>
-                            <p>사용후기: 65</p>
-                        </div>
-
-                    </div><!-- .item end -->
-                    <div class="item">
-                        <figure>
-                            <a href="#">
-                                <img src="img/24d84b6f8795f203915b5e0e3862bf46.jpg" alt="다슈 프로 에어리 폴리쉬 오일 150ml" />
-                            </a>
-                        </figure>
-                        <div>
-                            <h4>다슈 프로 에어리 폴리쉬 오일 150ml</h4>
-                            <p>모발의 질감 극대화 자연스러운 웨트 스타일 연출</p>
-                            <span>32,000원</span>
-                            <strong>23,900원</strong>
-                            <p>사용후기: 31</p>
-                        </div>
-
-                    </div><!-- .item end -->
-                    <div class="item">
-                        <figure>
-                            <a href="#">
-                                <img src="img/c1b6d5a23ca28ab6919c6da621efb51e.jpg" alt=" 다슈 라이크 001 워터리 마이크로 씬 10개입" />
-                            </a>
-                        </figure>
-                        <div>
-                            <h4>다슈 라이크 001 워터리 마이크로 씬 10개입</h4>
-                            <p>리얼 밀착감 천연 라텍스 콘돔 </p>
-                            <span>36,000원</span>
-                            <strong>13,900원</strong>
-                            <p>사용후기: 6</p>
-                        </div>
-
-                    </div><!-- .item end -->
-                    <div class="item">
-                        <figure>
-                            <a href="#">
-                                <img src="img/e925c84629a0b844bd93611365a46e29.jpg" alt=" 다슈 라이크 001 워터리 울트라 씬 12개입" />
-                            </a>
-                        </figure>
-                        <div>
-                            <h4>다슈 라이크 001 워터리 울트라 씬 12개입</h4>
-                            <p>부드러운 사용감 천연 라텍스 콘돔 </p>
-                            <span>25,000원</span>
-                            <strong>11,900원</strong>
-                            <p>사용후기: 3</p>
-                        </div>
-
-                    </div><!-- .item end -->
-                    <div class="item">
-                        <figure>
-                            <a href="#">
-                                <img src="img/8a5c6eb9e9b7e1b8881b183a40de281c.jpg" alt=" 다슈 데일리 구강청결제 [쿨민트향] 800ml" />
-                            </a>
-                        </figure>
-                        <div>
-                            <h4>다슈 데일리 구강청결제 [쿨민트향] 800ml</h4>
-                            <p>무색소 쿨민트향</p>
-                            <span>15,000원</span>
-                            <strong>9,900원</strong>
-                            <p>사용후기: 7</p>
-                        </div>
-
-                    </div><!-- .item end -->
-                    <div class="item">
-                        <figure>
-                            <a href="#">
-                                <img src="img/275b6eb23dadece720006f5260185931.jpg"
-                                    alt=" [공식몰 단독]★볼륨픽서세트★다슈 펌프형 그루밍 토닉 200ml+ 씨솔트 헤어픽서 180ml" />
-                            </a>
-                        </figure>
-                        <div>
-                            <h4>[공식몰 단독]★볼륨픽서세트★다슈 펌프형 그루밍 토닉 200ml+ 씨솔트 헤어픽서 180ml</h4>
-                            <p>간편해진 펌프형 그루밍 토닉으로 쉽고 빠른 볼륨 스타일링+헤어픽서로 볼륨 완벽 고정하기!</p>
-                            <span>43,000원</span>
-                            <strong>25,900원</strong>
-                            <p>사용후기: 55</p>
-                        </div>
-
-                    </div><!-- .item end -->
-                    <div class="item">
-                        <figure>
-                            <a href="#">
-                                <img src="img/272fe03244035396c3d7b5ba4421684e.jpg"
-                                    alt=" [기획세트] 다슈 아크 티트리 카밍 올인원 로션 180ml +  로션 50ml" />
-                            </a>
-                        </figure>
-                        <div>
-                            <h4>[기획세트] 다슈 아크 티트리 카밍 올인원 로션 180ml + 로션 50ml</h4>
-                            <p>완판템 그루밍토닉, 간편하게 펌프로! </p>
-                            <span>40,000원</span>
-                            <strong>18,800원</strong>
-                            <p>사용후기: 41</p>
-                        </div>
-
-                    </div><!-- .item end -->
-                    <div class="item">
-                        <figure>
-                            <a href="#">
-                                <img src="img/d84d044186c481529108075d54a8b5b6.jpg"
-                                    alt="[다슈 콤브빗 증정]다슈 클래식 스타일 그루밍 토닉 폼 200ml" />
-                            </a>
-                        </figure>
-                        <div>
-                            <h4>[다슈 콤브빗 증정]다슈 클래식 스타일 그루밍 토닉 폼 200ml</h4>
-                            <p>완판템 그루밍토닉 UPGRADE, 균일한 발림성 폼 제형 </p>
-                            <span>18,000원</span>
-                            <strong>12,800원</strong>
-                            <p>사용후기: 268</p>
-                        </div>
-
-                    </div><!-- .item end -->
-                    <div class="item">
-                        <figure>
-                            <a href="#">
-                                <img src="img/06c8bde052f7032d2af0a7ace4dacacc.jpg"
-                                    alt=" 다슈 라이크 로터스 내추럴 젤 오리지널 100ml" />
-                            </a>
-                        </figure>
-                        <div>
-                            <h4>다슈 라이크 로터스 내추럴 젤 오리지널 100ml</h4>
-                            <p>완판템 그루밍토닉, 간편하게 펌프로! </p>
-                            <span>25,000원</span>
-                            <strong>15,800원</strong>
-                            <p>사용후기: 14</p>
-                        </div>
-
-                    </div><!-- .item end -->
-
-                </div><!-- .list end -->
-                <div class="list_bottom">
-                    <a href="#">더보기</a>
+                <div>
+                    <a href="img/photography/KakaoTalk_20230607_153609461_15.jpg" data-fancybox="images">
+                        <img src="img/photography/KakaoTalk_20230607_153609461_15.jpg" alt="카페" />
+                    </a>
                 </div>
 
 
-            </div><!-- .inner end -->
-        </section><!-- .cont04 end -->
+            </div><!-- .list end -->
 
-        <section class="cont05">
-            <div class="inner">
-                <h3>리얼 리뷰</h3>
-                <div class="swiper cont05_01">
-                    <div class="swiper-wrapper">
-                        <div class="swiper-slide">
-                            <figure>
-                                <a href="#">
-                                    <img src="img/056a063b31_3e2c8.jpg" alt="샴푸" />
-                                </a>
-                            </figure>
-                            <div class="cont05_box">
-                                <div class="cont05_top">
-                                    <div class="cont05_top01">
-                                        <img src="img/b0eb0b3270e818d88215f2786d23e59e.jpg" alt="샴푸" />
-                                    </div>
-                                    <div class="cont05_top02">
-                                        <h4> 다슈 한방 두피 골드 대용량 탈모 샴푸 1000ml EX (리뉴얼)</h4>
-                                        <div class="cont05_top03">
-                                            <p>평점<span>4.8</span></p>
-                                            <p>리뷰<span>4,230개</span></p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="cont05_top04">
-                                    <ul>
-                                        <li><img src="img/🦆 icon _star_.png"></li>
-                                        <li><img src="img/🦆 icon _star_.png"></li>
-                                        <li><img src="img/🦆 icon _star_.png"></li>
-                                        <li><img src="img/🦆 icon _star_.png"></li>
-                                        <li><img src="img/🦆 icon _star_gray.png"></li>
-                                    </ul>
-                                </div>
-                                <p>업그레이드 되서 좋은것 같습니다(2021-01-14 12:41:37 에 등록된 네이버 페이 구매평)</p>
-                            </div>
-                        </div>
-                        <div class="swiper-slide">
-                            <figure>
-                                <a href="#">
-                                    <img src="img/056a063b31_3e2c8.jpg" alt="샴푸" />
-                                </a>
-                            </figure>
-                            <div class="cont05_box">
-                                <div class="cont05_top">
-                                    <div class="cont05_top01">
-                                        <img src="img/b0eb0b3270e818d88215f2786d23e59e.jpg" alt="샴푸" />
-                                    </div>
-                                    <div class="cont05_top02">
-                                        <h4> 다슈 한방 두피 골드 대용량 탈모 샴푸 1000ml EX (리뉴얼)</h4>
-                                        <div class="cont05_top03">
-                                            <p>평점<span>4.8</span></p>
-                                            <p>리뷰<span>4,230개</span></p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="cont05_top04">
-                                    <ul>
-                                        <li><img src="img/🦆 icon _star_.png"></li>
-                                        <li><img src="img/🦆 icon _star_.png"></li>
-                                        <li><img src="img/🦆 icon _star_.png"></li>
-                                        <li><img src="img/🦆 icon _star_.png"></li>
-                                        <li><img src="img/🦆 icon _star_.png"></li>
-                                    </ul>
-                                </div>
-                                <p>업그레이드 되서 좋은것 같습니다(2021-01-14 12:41:37 에 등록된 네이버 페이 구매평)</p>
-                            </div>
-                        </div>
-                        <div class="swiper-slide">
-                            <figure>
-                                <a href="#">
-                                    <img src="img/056a063b31_3e2c8.jpg" alt="샴푸" />
-                                </a>
-                            </figure>
-                            <div class="cont05_box">
-                                <div class="cont05_top">
-                                    <div class="cont05_top01">
-                                        <img src="img/b0eb0b3270e818d88215f2786d23e59e.jpg" alt="샴푸" />
-                                    </div>
-                                    <div class="cont05_top02">
-                                        <h4> 다슈 한방 두피 골드 대용량 탈모 샴푸 1000ml EX (리뉴얼)</h4>
-                                        <div class="cont05_top03">
-                                            <p>평점<span>4.8</span></p>
-                                            <p>리뷰<span>4,230개</span></p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="cont05_top04">
-                                    <ul>
-                                        <li><img src="img/🦆 icon _star_.png"></li>
-                                        <li><img src="img/🦆 icon _star_.png"></li>
-                                        <li><img src="img/🦆 icon _star_.png"></li>
-                                        <li><img src="img/🦆 icon _star_.png"></li>
-                                        <li><img src="img/🦆 icon _star_.png"></li>
-                                    </ul>
-                                </div>
-                                <p>업그레이드 되서 좋은것 같습니다(2021-01-14 12:41:37 에 등록된 네이버 페이 구매평)</p>
-                            </div>
-                        </div>
-                        <div class="swiper-slide">
-                            <figure>
-                                <a href="#">
-                                    <img src="img/056a063b31_3e2c8.jpg" alt="샴푸" />
-                                </a>
-                            </figure>
-                            <div class="cont05_box">
-                                <div class="cont05_top">
-                                    <div class="cont05_top01">
-                                        <img src="img/b0eb0b3270e818d88215f2786d23e59e.jpg" alt="샴푸" />
-                                    </div>
-                                    <div class="cont05_top02">
-                                        <h4> 다슈 한방 두피 골드 대용량 탈모 샴푸 1000ml EX (리뉴얼)</h4>
-                                        <div class="cont05_top03">
-                                            <p>평점<span>4.8</span></p>
-                                            <p>리뷰<span>4,230개</span></p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="cont05_top04">
-                                    <ul>
-                                        <li><img src="img/🦆 icon _star_.png"></li>
-                                        <li><img src="img/🦆 icon _star_.png"></li>
-                                        <li><img src="img/🦆 icon _star_.png"></li>
-                                        <li><img src="img/🦆 icon _star_.png"></li>
-                                        <li><img src="img/🦆 icon _star_.png"></li>
-                                    </ul>
-                                </div>
-                                <p>업그레이드 되서 좋은것 같습니다(2021-01-14 12:41:37 에 등록된 네이버 페이 구매평)</p>
-                            </div>
-                        </div>
-                        <div class="swiper-slide">
-                            <figure>
-                                <a href="#">
-                                    <img src="img/056a063b31_3e2c8.jpg" alt="샴푸" />
-                                </a>
-                            </figure>
-                            <div class="cont05_box">
-                                <div class="cont05_top">
-                                    <div class="cont05_top01">
-                                        <img src="img/b0eb0b3270e818d88215f2786d23e59e.jpg" alt="샴푸" />
-                                    </div>
-                                    <div class="cont05_top02">
-                                        <h4> 다슈 한방 두피 골드 대용량 탈모 샴푸 1000ml EX (리뉴얼)</h4>
-                                        <div class="cont05_top03">
-                                            <p>평점<span>4.8</span></p>
-                                            <p>리뷰<span>4,230개</span></p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="cont05_top04">
-                                    <ul>
-                                        <li><img src="img/🦆 icon _star_.png"></li>
-                                        <li><img src="img/🦆 icon _star_.png"></li>
-                                        <li><img src="img/🦆 icon _star_.png"></li>
-                                        <li><img src="img/🦆 icon _star_.png"></li>
-                                        <li><img src="img/🦆 icon _star_.png"></li>
-                                    </ul>
-                                </div>
-                                <p>업그레이드 되서 좋은것 같습니다(2021-01-14 12:41:37 에 등록된 네이버 페이 구매평)</p>
-                            </div>
-                        </div>
-
-
-                    </div>
-                    <div class="swiper-button-next"></div>
-                    <div class="swiper-button-prev"></div>
-                    <div class="swiper-pagination"></div>
-                </div>
-                <div class="cont05_bottom">
-                    <a href="#">상품리뷰 더보기</a>
-                </div>
-            </div>
-        </section>
-
-        <section class="cont06">
-            <div class="inner">
-                <div class="title">
-                    <figure>
-                        <img src="img/16583740_1558197247541806_2569363837216096256_a.jpg" alt="DASHU" />
-                    </figure>
-                    <p>follow</p>
-                </div>
-
-                <div #swiperRef="" class="swiper cont06_01">
-                    <div class="swiper-wrapper">
-                        <div class="swiper-slide">
-                            <img src="img/344542289_673786624759037_5841723764370663113_n.jpg" alt="대문" />
-                        </div>
-                        <div class="swiper-slide">
-                            <img src="img/343065261_181692808135890_3020301216159845336_n.jpg" alt="파운데이션" />
-                        </div>
-                        <div class="swiper-slide">
-                            <img src="img/342558381_244148411453203_6527358197115869957_n.jpg" alt="장발하고 싶은사람" />
-                        </div>
-                        <div class="swiper-slide">
-                            <img src="img/341909025_244802584712111_2181819879082472047_n.jpg" alt="얼굴작아지는법" />
-                        </div>
-                        <div class="swiper-slide">
-                            <img src="img/341886840_233303662701616_467583528375647333_n.jpg" alt="얼굴꽃" />
-                        </div>
-                        <div class="swiper-slide">
-                            <img src="img/340672161_765206941987041_2277786607349208729_n.jpg" alt="잘생기면 기분이 어떤가요?" />
-                        </div>
-                        <div class="swiper-slide">
-                            <img src="img/340357255_919113249338307_7873294349327348756_n.jpg" alt="누나" />
-                        </div>
-                        <div class="swiper-slide">
-                            <img src="img/340040719_965925081069731_4766730974812720413_n.jpg" alt="오늘은 동생 여장을 해볼게요" />
-                        </div>
-                        <div class="swiper-slide">
-                            <img src="img/339671791_1218277149061735_5540658055445824769_n.jpg" alt="장발리프컷 스타일링" />
-                        </div>
-                        <div class="swiper-slide">
-                            <img src="img/339662805_745584770533622_1917641636215433401_n.jpg" alt="어떻게 커트하는지 알려줄게" />
-                        </div>
-                        <div class="swiper-slide">
-                            <img src="img/339093711_2413269162167417_5861103002405621722_n.jpg" alt="종석아" />
-                        </div>
-                        <div class="swiper-slide">
-                            <img src="img/338441609_616505846545514_6664820470812471620_n.jpg" alt="차은우" />
-                        </div>
-                        <div class="swiper-slide">
-                            <img src="img/339117609_939549953898471_2295873392592724803_n.jpg" alt="뾰로롱" />
-                        </div>
-                        <div class="swiper-slide">
-                            <img src="img/338370203_954020949278670_7994682330576041633_n.jpg" alt="폴리쉬오일" />
-                        </div>
-                        <div class="swiper-slide">
-                            <img src="img/338590994_935939137828992_8980573255039034064_n.jpg" alt="오늘은 내얼굴이" />
-                        </div>
-
-                    </div>
-                    <div class="swiper-button-next"></div>
-                    <div class="swiper-button-prev"></div>
-                    <div class="swiper-pagination"></div>
-                </div>
-            </div>
-        </section>
-    </main>
-
+        </div><!-- .inner end -->
+    </section><!-- .cont03 end -->
     <footer>
-        <div class="footer">
-            <div class="inner">
-                <div class="list">
-                    <nav class="list_top">
-                        <ul>
-                            <li><a href="#">회사소개</a></li>
-                            <li><a href="#">이용약관</a></li>
-                            <li><a href="#">쇼핑몰이용안내</a></li>
-                            <li><a href="#">개인정보 취급방침</a></li>
-                            <li><a href="#">제휴문의</a></li>
-
-                        </ul>
-                    </nav>
-
-
-                    <h5>CUSTOMER CENTER</h5>
-                    <nav class="list_middle">
-                        <ul>
-                            <li>입금/배송/교환문의<strong>070-8228-7425</strong></li>
-                            <li>제품/제휴문의<strong>032-569-2057</strong></li>
-                            <li>마케팅문의<strong>dashukorea@naver.com</strong></li>
-
-                        </ul>
-                    </nav>
-
-                    <h5>COMPANY INFO</h5>
-                    <nav class="list_bottom">
-                        <ul>
-                            <li>회사명 : 다슈코리아(주)</li>
-                            <li>대표 : 정재환</li>
-                            <li>대표전화 : 032-569-2057</li>
-                            <li>팩스 : 032-562-0908</li>
-                            <li>주소 : 22661 인천광역시 서구 검단로326번길 35-43 (왕길동)</li>
-                            <li>사업자 등록번호 : 256-87-00147</li>
-                            <li>통신판매업 신고 : 제2016-인천서구-0477호</li>
-                            <li>개인정보관리책임자 : 정재환 (dashukorea@naver.com)</li>
-                            <li>이메일 : wakkorea@hanmail.net</li>
-                        </ul>
-                    </nav>
-                    <p>COPYRIGHT © 2010 다슈코리아(주). ALL RIGHTS RESERVED.</p>
-
-                </div><!-- .list end -->
-
-            </div>
-        </div>
+        <p>copyright (c) 2023. KOHYOOMI. All rights reserved</p>
     </footer>
+
+
 </body>
 
 </html>
